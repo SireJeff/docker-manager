@@ -31,10 +31,9 @@ def job():
 
 if __name__ == "__main__":
     # Run the job immediately upon script execution
-    job()
 
     # Schedule the job to run every 8 hours
-    schedule.every(3).minuets.do(job)
+    schedule.every(3).minuet.do(job)
 
     while True:
         schedule.run_pending()
