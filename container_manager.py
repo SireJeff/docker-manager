@@ -43,7 +43,7 @@ if __name__ == "__main__":
     job()
 
     # Schedule the job to run every 8 hours
-    schedule.every(8).hours.do(job)
+    schedule.every(4).hours.do(job)
 
     while True:
         schedule.run_pending()
