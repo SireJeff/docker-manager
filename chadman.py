@@ -20,9 +20,13 @@ def stop_and_remove_containers():
             'sandmanshiri-single-ip-kfkfua'
         ]
         subprocess.run(['docker', 'stop'] + containers_to_remove, check=True)
-        subprocess.run(['docker', 'rm'] + containers_to_remove, check=True)
+        all_container_ids = subprocess.check_output(['docker', 'ps', '-aq']).decode('utf-8').split()
+        if all_container_ids:
+            subprocess.run(['docker', 'rm'] + containers_to_remove, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error during container stop and removal: {e}")
+        
+    
 
 def pull_and_run_images():
     try:
