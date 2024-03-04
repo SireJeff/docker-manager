@@ -19,10 +19,10 @@ def stop_and_remove_containers():
             'sandmanshiri-single-ip-msz',
             'sandmanshiri-single-ip-kfkfua'
         ]
-        subprocess.run(['docker', 'stop'] + containers_to_remove, check=True)
+        subprocess.run(['docker', 'stop'] + containers_to_remove)
         all_container_ids = subprocess.check_output(['docker', 'ps', '-aq']).decode('utf-8').split()
         if all_container_ids:
-            subprocess.run(['docker', 'rm'] + containers_to_remove, check=True)
+            subprocess.run(['docker', 'rm'] + containers_to_remove)
     except subprocess.CalledProcessError as e:
         print(f"Error during container stop and removal: {e}")
         
@@ -48,8 +48,8 @@ def pull_and_run_images():
         for image in images:
             image_name, image_version = image.split(':')
             repo ,ver=image_name.split('/')
-            subprocess.run(['docker', 'pull', image], check=True)
-            subprocess.run(['docker', 'run', '-d', '--name', f'{repo}-{ver}-{image_version}', image], check=True)
+            subprocess.run(['docker', 'pull', image])
+            subprocess.run(['docker', 'run', '-d', '--name', f'{repo}-{ver}-{image_version}', image])
     except subprocess.CalledProcessError as e:
         print(f"Error during image pull and run: {e}")
 
