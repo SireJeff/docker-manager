@@ -12,12 +12,14 @@ def stop_and_remove_containers():
             'sandmanshiri-single-ip-2ua',
             'sandmanshiri-single-ip-gh1u',
             'sandmanshiri-pvc-fdm',
-            'rainmanov-org-zeta',
             'sandmanshiri-single-ip-bh1u',
             'sandmanshiri-single-ip-hpl2',
             'sandmanshiri-single-ip-srsh',
             'sandmanshiri-single-ip-msz',
-            'sandmanshiri-single-ip-kfkfua'
+            'sandmanshiri-single-ip-kfkfua',
+            'sandmanshiri-single-ip-tiwan07',
+            'sandmanshiri-single-ip-mdfwood',
+            'sandmanshiri-single-ip-Eh1u'
         ]
         subprocess.run(['docker', 'stop'] + containers_to_remove)
         time.sleep(60)
