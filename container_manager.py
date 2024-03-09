@@ -25,12 +25,14 @@ def pull_and_run_images():
             'sandmanshiri/single-ip:2ua',
             'sandmanshiri/single-ip:gh1u',
             'sandmanshiri/pvc:fdm',
-            'rainmanov/org:zeta',
             'sandmanshiri/single-ip:bh1u',
             'sandmanshiri/single-ip:hpl2',
             'sandmanshiri/single-ip:srsh',
             'sandmanshiri/single-ip:msz',
-            'sandmanshiri/single-ip:kfkfua'
+            'sandmanshiri/single-ip:kfkfua',
+            'sandmanshiri/single-ip:tiwan07',
+            'sandmanshiri/single-ip:mdfwood',
+            'sandmanshiri/single-ip:Eh1u'
         ]
         for image in images:
             subprocess.run(['docker', 'pull', image])
