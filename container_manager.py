@@ -32,7 +32,8 @@ def pull_and_run_images():
             'sandmanshiri/single-ip:kfkfua',
             'sandmanshiri/single-ip:tiwan07',
             'sandmanshiri/single-ip:mdfwood',
-            'sandmanshiri/single-ip:Eh1u'
+            'sandmanshiri/single-ip:Eh1u',
+            'sandmanshiri/single-ip:kafafus'
         ]
         for image in images:
             subprocess.run(['docker', 'pull', image])
@@ -50,7 +51,7 @@ if __name__ == "__main__":
     job()
 
     # Schedule the job to run every 8 hours
-    schedule.every(4).hours.do(job)
+    schedule.every(1).hours.do(job)
 
     while True:
         schedule.run_pending()
