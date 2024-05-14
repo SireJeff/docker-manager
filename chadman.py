@@ -12,7 +12,8 @@ def stop_and_remove_containers():
             'sandmanshiri-single-ip-tiwan07',
             'sandmanshiri-single-ip-mdfwood',
             'sandmanshiri-single-ip-Eh1u',
-            'sandmanshiri-single-ip-kafafus'
+            'sandmanshiri-single-ip-kafafus',
+            'sandmanshiri-single-ip-gh1u'
         ]
         subprocess.run(['docker', 'stop'] + containers_to_remove)
         #time.sleep(60)
@@ -34,7 +35,8 @@ def pull_and_run_images():
             'sandmanshiri/single-ip:tiwan07',
             'sandmanshiri/single-ip:mdfwood',
             'sandmanshiri/single-ip:Eh1u',
-            'sandmanshiri/single-ip:kafafus'
+            'sandmanshiri/single-ip:kafafus',
+            'sandmanshiri/single-ip:gh1u'
         ]
         for image in images:
             image_name, image_version = image.split(':')
