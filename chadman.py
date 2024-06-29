@@ -43,7 +43,7 @@ def pull_and_run_images():
         for image in images:
             image_name, image_version = image.split(':')
             repo ,ver=image_name.split('/')
-           # subprocess.run(['docker', 'pull', image])
+            subprocess.run(['docker', 'pull', image])
             subprocess.run(['docker', 'run', '-d', '--name', f'{repo}-{ver}-{image_version}', image])
     except subprocess.CalledProcessError as e:
         print(f"Error during image pull and run: {e}")
