@@ -6,13 +6,13 @@ def stop_and_remove_containers():
     try:
         # Stop and remove containers with specific names
         containers_to_remove = [
-            'sandmanshiri-single-ip-srsh',
-            'sandmanshiri-single-ip-msz',
-            'sandmanshiri-single-ip-kfkfua',
+            #'sandmanshiri-single-ip-srsh',
+            #'sandmanshiri-single-ip-msz',
+            #'sandmanshiri-single-ip-kfkfua',
             'sandmanshiri-single-ip-tiwan07',
             'sandmanshiri-single-ip-mdfwood',
             'sandmanshiri-single-ip-eh1u',
-            'sandmanshiri-single-ip-kafafus',
+            #'sandmanshiri-single-ip-kafafus',
             'sandmanshiri-single-ip-gh1u',
             'sandmanshiri-single-ip-mtpphys'
         ]
@@ -30,14 +30,14 @@ def pull_and_run_images():
     try:
         # Pull and run the new set of Docker images
         images = [
-            'sandmanshiri/single-ip:srsh',
+            #'sandmanshiri/single-ip:srsh',
             'sandmanshiri/single-ip:msz',
-            'sandmanshiri/single-ip:kfkfua',
+            #'sandmanshiri/single-ip:kfkfua',
             'sandmanshiri/single-ip:tiwan07',
             'sandmanshiri/single-ip:mdfwood',
             'sandmanshiri/single-ip:eh1u',
-            'sandmanshiri/single-ip:kafafus',
-            'sandmanshiri/single-ip:gh1u',
+            #'sandmanshiri/single-ip:kafafus',
+            #'sandmanshiri/single-ip:gh1u',
             'sandmanshiri/single-ip:mtpphys'
         ]
         for image in images:
