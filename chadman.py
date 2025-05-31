@@ -7,7 +7,7 @@ def stop_and_remove_containers():
         # Stop and remove containers with specific names
         containers_to_remove = [
             #'sandmanshiri-single-ip-srsh',
-            #'sandmanshiri-single-ip-msz',
+            'sandmanshiri-single-ip-msz',
             #'sandmanshiri-single-ip-kfkfua',
             'sandmanshiri-single-ip-tiwan07',
             'sandmanshiri-single-ip-mdfwood',
